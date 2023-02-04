@@ -2,3 +2,12 @@
 Software-defined networking (SDN) technology enables for dynamic, programmatically effective network design to boost network performance and monitoring, which makes network administration more like cloud computing than traditional network management. SDN is meant to address the static design of traditional networks. SDN separates the routing mechanism from the forwarding of network packets (data plane) in an effort to consolidate network intelligence into a single network component (control plane). The control plane, which is thought of as the central processing unit (CPU) of the SDN network and contains all of the network's intelligence, is made up of one or more controllers. The main issue with SDN is that centralization has drawbacks for security, scalability, and flexibility on its own.
 
 The OpenFlow protocol, which is used to decide the flow of network packets across network switches by communicating remotely with network plane elements, has been connected to SDN regularly since it was first introduced in 2011. However, as of 2012, private systems have begun use the expression. These include the Open Network Environment from Cisco Systems and the Nicira network virtualization technology.
+##Concept
+The underlying infrastructure may be isolated from network services and applications and made directly programmable since network control and forwarding functions are separated in SDN systems.
+The OpenFlow protocol can be used in SDN technologies. The SDN architecture is: 
+   **Directly programmable:**etwork control is directly programmable because it is decoupled from forwarding functions.
+    **Agile:** Abstracting control from forwarding lets administrators dynamically adjust network-wide traffic flow to meet changing needs.
+    **Centrally managed:** Network intelligence is (logically) centralized in software-based SDN controllers that maintain a global view of the network, which appears to applications and policy engines as a single, logical switch.
+    **Programmatically configured:** SDN lets network managers configure, manage, secure, and optimize network resources very quickly via dynamic, automated SDN programs, which they can write themselves because the programs do not depend on proprietary software.
+   **Open standards-based and vendor-neutral:** When implemented through open standards, SDN simplifies network design and operation because instructions are provided by SDN controllers instead of multiple, vendor-specific devices and protocols.
+   
