@@ -7,7 +7,7 @@ The underlying infrastructure may be isolated from network services and applicat
 
 The OpenFlow protocol can be used in SDN technologies. The SDN architecture is: 
 
-**01. Directly programmable:**etwork control is directly programmable because it is decoupled from forwarding functions.
+**01. Directly programmable:** Network control is directly programmable because it is decoupled from forwarding functions.
    
 **02. Agile:** Abstracting control from forwarding lets administrators dynamically adjust network-wide traffic flow to meet changing needs.
     
