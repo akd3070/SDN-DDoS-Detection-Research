@@ -30,6 +30,8 @@ $ sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev 
 
 $ sudo apt-get install python3.8
 
+$ sudo apt install python-is-python3
+
 $ sudo alias python = python3
 
 $ sudo apt-get install python-tk
