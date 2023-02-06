@@ -37,6 +37,8 @@ The OpenFlow protocol can be used in SDN technologies. The SDN architecture is:
 
 ```sudo apt-get install python-tk```
 
+```sudo apt install openjdk-8-jdk```
+
 # Installing Mininet #
 ```git clone https://github.com/mininet/mininet.git```
 
