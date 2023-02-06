@@ -39,6 +39,10 @@ The OpenFlow protocol can be used in SDN technologies. The SDN architecture is:
 
 ```sudo apt install openjdk-8-jdk```
 
+```sudo snap install --classic eclipse```
+
+http://networkstatic.net/tutorial-to-build-a-floodlight-sdn-openflow-controller-module/
+
 # Installing Mininet #
 ```git clone https://github.com/mininet/mininet.git```
 
