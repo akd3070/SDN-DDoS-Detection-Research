@@ -29,13 +29,17 @@ The OpenFlow protocol can be used in SDN technologies. The SDN architecture is:
 
 ```sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev  libncursesw5-dev xz-utils tk-dev```
 
-```sudo apt-get install python3.8```
+```sudo apt-get install python3```
 
 ```sudo apt install python-is-python3```
 
 ```sudo alias python = python3```
 
 ```sudo apt-get install python-tk```
+
+```sudo apt-get install python3-tk```
+
+```sudo pip3 install virtualenv```
 
 ```sudo apt install openjdk-8-jdk```
 
@@ -52,10 +56,18 @@ http://networkstatic.net/tutorial-to-build-a-floodlight-sdn-openflow-controller-
   
   ```git checkout -b 2.2.0b3    #Less bugs```
   
-  ```~/mininet/util/install.sh -a```
+  ```sudo /mininet/util/install.sh -a```
                      
                      # C0ngratulati0ns #
                      
+                     
+```git clone https://github.com/martimy/flowmanager```
+```git clone https://github.com/faucetsdn/ryu.git
+ cd ryu
+pip install .```
+
+
+
 ## OpenFlow ##
 
 OpenvSwitch
