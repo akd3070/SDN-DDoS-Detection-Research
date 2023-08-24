@@ -58,13 +58,13 @@ http://networkstatic.net/tutorial-to-build-a-floodlight-sdn-openflow-controller-
   
   ```sudo /mininet/util/install.sh -a```
                      
-                     # C0ngratulati0ns #
+   # C0ngratulati0ns #
                      
                      
 ```git clone https://github.com/martimy/flowmanager```
-```git clone https://github.com/faucetsdn/ryu.git
- cd ryu
-pip install .```
+```git clone https://github.com/faucetsdn/ryu.git```
+```cd ryu```
+```pip install .```
 
 
 
