@@ -29,37 +29,33 @@ sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev li
 sudo apt-get install python3 &&
 sudo apt-get install python-tk &&
 sudo apt-get install python3-tk &&
-sudo apt install openjdk-8-jdk &&
+sudo apt install openjdk-11-jdk &&
 sudo apt install gradle &&
 sudo apt install libcap-dev
 ```
 
 # Installing Mininet #
 ```
-git clone https://github.com/mininet/mininet.git
-```
-```
-cd mininet 
-```
-```
-git tag
-```
-```
-git checkout -b <Select The Required Version>    
-```  
-```
-sudo /mininet/util/install.sh -a
+git clone https://github.com/mininet/mininet.git &&
+cd mininet &&
+git tag &&
+git checkout -b cs244-spring-2012-final &&
+cd util
+sudo ./install.sh -a 
 ```
 ### Mininet is installed :thumbsup:
 
                      
 # Insatalling Ryu #                 
 ```
-git clone git clone https://github.com/osrg/ryu.git &&
+git clone https://github.com/osrg/ryu.git &&
 cd ryu &&
 sudo pip install .
 ```
-### Installed Ryu 
+### Installed Ryu ,now test Ryu
+```
+ryu-manager ryu.app.simple_switch_13
+```
 
 # Installing CICFlowMeter
 ```
