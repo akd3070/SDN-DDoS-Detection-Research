@@ -22,15 +22,15 @@ The OpenFlow protocol can be used in SDN technologies. The SDN architecture is:
 ### Dependencies ###
 
 ```
-sudo apt-get update
-sudo apt-get upgrade
-sudo apt-get install git
-sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev  libncursesw5-dev xz-utils tk-dev
-sudo apt-get install python3
-sudo apt-get install python-tk
-sudo apt-get install python3-tk
-sudo apt install openjdk-8-jdk
-sudo apt install gradle
+sudo apt-get update &&
+sudo apt-get upgrade &&
+sudo apt-get install git &&
+sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev  libncursesw5-dev xz-utils tk-dev &&
+sudo apt-get install python3 &&
+sudo apt-get install python-tk &&
+sudo apt-get install python3-tk &&
+sudo apt install openjdk-8-jdk &&
+sudo apt install gradle &&
 sudo apt install libcap-dev
 ```
 
@@ -55,13 +55,9 @@ sudo /mininet/util/install.sh -a
                      
 # Insatalling Ryu #                 
 ```
-git clone git clone https://github.com/osrg/ryu.git```
-```
-```
-cd ryu
-```
-```
-pip install .
+git clone git clone https://github.com/osrg/ryu.git &&
+cd ryu &&
+sudo pip install .
 ```
 ### Installed Ryu 
 
