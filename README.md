@@ -37,7 +37,7 @@ To install the required tools and dependencies, follow these steps:
 ```bash
 git clone https://github.com/akd3070/SDN-DDoS-Detection-Research.git &&
 cd SDN-DDoS-Detection-Research &&
-sudo chmod +x Install.sh 
+sudo chmod +x Install.sh &&
 ./Install.sh
 ```
 All The required tools are installed and there depandiancies 
