@@ -1,97 +1,58 @@
-# SDN #
-Software-defined networking (SDN) technology enables for dynamic, programmatically effective network design to boost network performance and monitoring, which makes network administration more like cloud computing than traditional network management. SDN is meant to address the static design of traditional networks. SDN separates the routing mechanism from the forwarding of network packets (data plane) in an effort to consolidate network intelligence into a single network component (control plane). The control plane, which is thought of as the central processing unit (CPU) of the SDN network and contains all of the network's intelligence, is made up of one or more controllers. The main issue with SDN is that centralization has drawbacks for security, scalability, and flexibility on its own.
 
-The OpenFlow protocol, which is used to decide the flow of network packets across network switches by communicating remotely with network plane elements, has been connected to SDN regularly since it was first introduced in 2011. However, as of 2012, private systems have begun use the expression. These include the Open Network Environment from Cisco Systems and the Nicira network virtualization technology.
-## Concept ##
-The underlying infrastructure may be isolated from network services and applications and made directly programmable since network control and forwarding functions are separated in SDN systems.
+# **SDNShield: An Machine Learing Based DDoS Attack Detection in SDN Using Our On Custom Dataset**
 
-The OpenFlow protocol can be used in SDN technologies. The SDN architecture is: 
+The "SDNShield" project is dedicated to advancing the state-of-the-art in DDoS (Distributed Denial of Service) attack detection within the context of Software-Defined Networking (SDN). DDoS attacks remain a significant threat to network infrastructure, making it crucial to develop effective mitigation strategies. Leveraging the flexibility and programmability of SDN, we have devised an innovative approach to enhance network security.
 
-**01. Directly programmable:** Network control is directly programmable because it is decoupled from forwarding functions.
-   
-**02. Agile:** Abstracting control from forwarding lets administrators dynamically adjust network-wide traffic flow to meet changing needs.
-    
-**03. Centrally managed:** Network intelligence is (logically) centralized in software-based SDN controllers that maintain a global view of the network, which appears to applications and policy engines as a single, logical switch.
-    
-**04. Programmatically configured:** SDN lets network managers configure, manage, secure, and optimize network resources very quickly via dynamic, automated SDN programs, which they can write themselves because the programs do not depend on proprietary software.
-    
-**05. Open standards-based and vendor-neutral:** When implemented through open standards, SDN simplifies network design and operation because instructions are provided by SDN controllers instead of multiple, vendor-specific devices and protocols.
-   
-## How to Conduct The Experiment ? ##
+## **Key Features:**
 
-### Dependencies ###
+**1. Machine Learning-Based Detection:** Our project employs machine learning techniques to analyze network traffic patterns in real-time. By training our models on a carefully curated and tailored dataset, we aim to identify and differentiate between legitimate network traffic and malicious DDoS attacks with a high degree of accuracy.
+
+**2. Custom Dataset:** To facilitate our research, we have developed a specialized dataset that reflects real-world network traffic scenarios using mininet and ryu. This bespoke dataset encompasses a wide range of DDoS attack types and normal network activities, enabling comprehensive training and evaluation of our detection algorithms.
+
+**3. SDN Integration:** "SDNShield" seamlessly integrates with SDN technologies, leveraging the OpenFlow protocol. This integration allows us to dynamically reconfigure network flows, diverting or mitigating traffic during detected attacks, thereby enhancing network resilience.
+
+**4. Open Source Collaboration:** We believe in the power of open source collaboration and have made our project available on GitHub. Researchers, network administrators, and security professionals can explore our codebase, replicate experiments, and contribute to the ongoing improvement of DDoS detection in SDN environments.
+
+## **Objective:**
+
+Our primary objective is to provide a robust and adaptable solution for DDoS attack detection in SDN. By combining machine learning, a custom dataset, and SDN capabilities, we aim to enhance the security and reliability of network infrastructures. We invite the research community to engage with "SDNShield" and contribute to the evolution of network security in the face of evolving DDoS threats.
+
+
+
+## **Installation**
+
+Before proceeding with the installation, make sure you have the following prerequisites installed on your system:
 
 ```
-sudo apt-get update &&
-sudo apt-get upgrade &&
-sudo apt-get install git &&
-sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev  libncursesw5-dev xz-utils tk-dev &&
-sudo apt-get install python3 &&
-sudo apt-get install python-tk &&
-sudo apt-get install python3-tk &&
-sudo apt install openjdk-11-jdk &&
-sudo apt install gradle &&
-sudo apt install libcap-dev
+OS: Ubuntu 16.04 LTS or Ubuntu 18.04 LTS
+Python : 3.6/3.8 and 2.7 (Default in OS required)
+Python 3.6/3.8 as python3
+Python 2.7 as python2
 ```
 
-# Installing Mininet #
+The repository contains **CICFlowMeter**, which includes corrected code and is fully functional for our research.
+
+To install the required tools and dependencies, follow these steps:
+
+```bash
+git clone https://github.com/akd3070/SDN-DDoS-Detection-Research.git &&
+cd SDN-DDoS-Detection-Research &&
+sudo chmod +x Install.sh 
+./Install.sh
 ```
-git clone https://github.com/mininet/mininet.git &&
-cd mininet &&
-git tag &&
-git checkout -b cs244-spring-2012-final &&
-cd util
-sudo ./install.sh -a 
-```
-### Mininet is installed :thumbsup:
+All The required tools are installed and there depandiancies 
+## **Conducting The Experiment**
+After Sucessfully Running the Script
 
-                     
-# Insatalling Ryu #                 
-```
-git clone https://github.com/osrg/ryu.git &&
-cd ryu &&
-sudo pip install .
-```
-### Installed Ryu ,now test Ryu
-```
-ryu-manager ryu.app.simple_switch_13
-```
+Some Images
+![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
 
-# Installing CICFlowMeter
-```
+## Documentation
 
-## OpenFlow ##
+[Documentation](https://linktodocumentation)
 
-OpenvSwitch
+## Acknowledgements
 
-Traditionally, networking hardwares from different vendors often have special configuration and management systems, which limits the interacting between routers and switches from different manufacturers. To solve this, OpenFlow is created as an open programmable network protocol for configuring and managing Gigabit network switches from various vendors. It enables us to offload the control plane of all the switches to a central controller and lets a central software define the behavior of the network. Thus network administrators can use OpenFlow software to manage and control traffic flow among different branded switching equipments.
-
-# Working #
-
-OpenFlow generally consists of three components: OpenFlow controller, OpenFlow protocol and a chain of flow tables set up on the OpenFlow switch (as shown above). The OpenFlow protocol is like a media for the controller talking securely with OpenFlow switch. The OpenFlow controller can set rules about the data-forwarding behaviors of each forwarding device through the OpenFlow protocol. Flow tables installed on the switch often stores a collection of flow entries. So when a data packet arrives at the OpenFlow switch, the switch will search for matched flow entries in the flow tables and executes corresponding actions. If no match is found, an inquiry event will sent to the OpenFlow controller which then responds with a new flow entry for handling that queued packet.
-
-## OpenvSwitch ##
-
-OpenvSwitch, sometimes abbreviated as OVS, is an open-source OpenFlow switch that works as a virtual switch in the virtualized environments such as KVM. It also used as a multilayer software for interconnecting virtual devices in the same host or between different hosts. Currently, OpenvSwitch can run on any Linux-based virtualization platform, which includes: KVM, VirtualBox, Xen, Xen Cloud Platform, XenServer.
-
-# Working #
-
-OpenvSwitch has eight core elements: ovs-vswitchd, Linux kernel module, ovsdb-server, ovs-dpctl, ovs-vsctl, ovs-appctl, ovs-ofctl, and ovs-pki. Ovs-vswitchd is a daemon that implements the switch. Linux kernel module is for flow-based switching. Ovsdb-server is a lightweight database server. Ovs-dpctl is a tool for configuring the switch kernel module. Ovs-vsctl is a utility for querying and updating the configuration of ovs-vswitchd. Ovs-appctl is a utility that sends commands to running Open vSwitch daemons. Ovs-ofctl is a utility for controlling the OpenFlow features of OVS. Ovs-pki is a utility for creating and managing the public-key infrastructure.
-
-## OpenvSwitch vs OpenFlow: What’s Their Relationship? ##
-
-OpenvSwitch and OpenFlow are both used for SDN application. OpenFlow is one of the first SDN standards. OpenvSwitch is an OpenStack SDN component. As to their relationship, OpenvSwitch is one of the most popular implementations of OpenFlow. Apart from OpenFlow, OpenvSwitch also supports other switch management protocols such as OVSDB (Open vSwitch Database Management Protocol).
-
-## OpenFlow Limitations ##
-
-As OpenFlow remains in a state of rapid evolution, it is difficult to pin down precise limitations, as these may be addressed in subsequent releases. One limitation is that the currently defined match fields are limited to the packet header. Thus, deep packet inspection (DPI), whereby fields in the packet’s payload may be used to distinguish flows, is not supported in a standard OpenFlow. Nonetheless, the EXPERIMENTER modes that are permitted within OpenFlow do open the way for such application layer flow definition in the future. Second, some OpenFlow abstractions may be too complex to implement directly in today’s silicon. This is unlikely to remain an insurmountable obstacle for long, however, since the tremendous momentum behind SDN is likely to give birth to switching chips that are designed explicitly to implement even OpenFlow’s most complicated features.
-
-If we cast a wider net and consider limitations of all of Open SDN, there are a number of other areas to consider.
-
-## Open vSwitch Limitations ##
-
-*Lacks stability – Open vSwitch has some stability problems such as Kernetl panics, ovs-switched segfaults, and data corruption.
-
-*Complex operation – Open vSwitch itself is a complex solution, which owns so many functions. It is hard to learn, install and operate.
-
-
+ - [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
+ - [Awesome README](https://github.com/matiassingers/awesome-readme)
+ - [How to write a Good readme](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
