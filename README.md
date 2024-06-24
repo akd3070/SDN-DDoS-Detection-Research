@@ -44,6 +44,10 @@ All The required tools are installed and there depandiancies
 ## **Conducting The Experiment**
 After Sucessfully Running the Script
 
+'''
+ryu-manager ryu.app.simple_switch
+'''
+
 Some Images
 ![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
 
