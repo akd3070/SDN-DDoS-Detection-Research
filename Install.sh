@@ -63,6 +63,7 @@ echo "-----------------------------------------------------Installating Dependan
 sudo apt-get -y install git &&
 sudo apt-get -y install make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev &&
 sudo apt-get -y install python3 &&
+sudo apt-get -y install python3-pip &&
 sudo apt-get -y install python-tk &&
 sudo apt-get -y install python3-tk &&
 sudo apt-get -y install openjdk-11-jdk &&
@@ -87,7 +88,7 @@ echo "--------------------------------------------------------------------Instal
 echo " -----------------------------------------------------------------------Installing Ryu.----------------------------------------------------------------------"
 git clone https://github.com/osrg/ryu.git &&
 cd ryu && 
-sudo pip install . &&
+sudo pip3 install . &&
 cd ..
 echo "------------------------------------------------------------------------------Installed Ryu.-----------------------------------------------------------------"
 
