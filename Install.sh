@@ -91,10 +91,12 @@ cd ryu &&
 sudo pip3 install . &&
 cd ..
 echo "------------------------------------------------------------------------------Installed Ryu.-----------------------------------------------------------------"
-
 echo "-----------------------------------------------------------Setting Up Settings For CICFlowMeter.-------------------------------------------------------------"
+cd CICFlowMeter
+chmod -R u+rwx,g+rwx,o+rwx .
 cd ~
+cd ..
+cd ..
 cd /lib/jvm
-chmod +x java-1.11.0-openjdk-amd64
-chmod +x java-11-openjdk-amd64
+sudo chmod -R u+rwx,g+rwx,o+rwx .
 echo "----------------------------------------------Sucessfully Installed All the tools And Its Requirements-------------------------------------------------------"
